@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Pavel Usachev <webcodekeeper@hotmail.com>
+ * @copyright Copyright (c) 2017, Pavel Usachev
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="ALevel_QuickOrder::all" title="Quick Order All" translate="title" sortOrder="30" >
+                    <resource id="ALevel_QuickOrder::grid" title="Orders grid" translate="title" sortOrder="10" >
+                        <resource
+                                id="ALevel_QuickOrder::create"
+                                title="Order Create"
+                                translate="title"
+                                sortOrder="10"
+                        />
+                        <resource
+                                id="ALevel_QuickOrder::edit"
+                                title="Order Edit"
+                                translate="title"
+                                sortOrder="20"
+                        />
+                        <resource
+                                id="ALevel_QuickOrder::delete"
+                                title="Order Delete"
+                                translate="title"
+                                sortOrder="30"
+                        />
+                        <resource
+                                id="ALevel_QuickOrder::mass_delete"
+                                title="Mass Delete"
+                                translate="title"
+                                sortOrder="40"
+                        />
+                    </resource>
+                    <resource
+                            id="ALevel_QuickOrder::system_config"
+                            title="Quick Order System Config"
+                            translate="title"
+                            sortOrder="40"
+                    />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

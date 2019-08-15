@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Pavel Usachev <webcodekeeper@hotmail.com>
+ * @copyright Copyright (c) 2017, Pavel Usachev
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="ALevel_QuickOrder::all"
+                title="Quick Order"
+                translate="title"
+                module="ALevel_QuickOrder"
+                sortOrder="20"
+                dependsOnModule="ALevel_QuickOrder"
+                resource="ALevel_QuickOrder::all"
+        />
+        <add
+                id="ALevel_QuickOrder::OrdersGrid"
+                title="Orders"
+                translate="title"
+                module="ALevel_QuickOrder"
+                sortOrder="10"
+                parent="ALevel_QuickOrder::all"
+                action="alevel_quickorder/orders/index"
+                resource="ALevel_QuickOrder::orders_grid_listing"
+        />
+        <add
+                id="ALevel_QuickOrder::StatusesGrid"
+                title="Statuses"
+                translate="title"
+                module="ALevel_QuickOrder"
+                sortOrder="10"
+                parent="ALevel_QuickOrder::all"
+                action="alevel_quickorder/statuses/status_grid"
+                resource="ALevel_QuickOrder::statuses_grid_listing"
+        />
+        <add
+                id="ALevel_QuickOrder::system_config"
+                title="Config"
+                translate="title"
+                module="ALevel_QuickOrder"
+                sortOrder="10"
+                parent="ALevel_QuickOrder::all"
+                action="adminhtml/system_config/edit/section/orders"
+                resource="ALevel_QuickOrder::system_config"
+        />
+    </menu>
+</config>
